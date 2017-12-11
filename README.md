@@ -13,7 +13,18 @@ Player 2/Computer:
           Move horizontally across the top of the screen
           Drop objects to hit/kill Player 1
           
+Scoring:
+          Each time player1 catches the target, 10 pts are awarded
+          Each time player2 kills player1, player2 wins
+          
 ## Functionality
+
+## Stretch Goals
+
+> Create different levels/themes that can be selected from a screen after game mode selection
+          > changes background, meteors, object and player
+> Start with 3 lives for player1
+          > a life will be taken from player1 each time he/she dies
   
   
   
