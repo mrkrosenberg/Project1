@@ -25,6 +25,7 @@ Scoring:
           > changes background, meteors, object and player
 > Start with 3 lives for player1
           > a life will be taken from player1 each time he/she dies
+> Vary objects being dropped 
   
   
   
