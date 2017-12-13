@@ -18,7 +18,7 @@
 }
 
 #wormHitZone {
-
+	height: 10vh;
 }
 
 #wormHole {
@@ -30,5 +30,18 @@
 	height: 6vh;
 	width: 6vw;
 	background-color: red;
+	position: absolute;
+}
+
+.Morty {
+	height: 6vh;
+	width: 6vw;
+	background-color: blue;
+	position: absolute;
+}
+
+.portHitZone {
+	width: 10vh;
+	height: 10vh;
 	position: absolute;
 }
