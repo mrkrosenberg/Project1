@@ -17,13 +17,20 @@
 	
 }
 
-#wormHitZone {
-	height: 10vh;
-}
-
 #wormHole {
 	height: 10vh;
 
+}
+
+.target {
+	height: 15vh;
+	width: 15vw;
+	background-color: yellow;
+	position: absolute;
+}
+
+#gem {
+	height: 10vh;
 }
 
 .Rick {
@@ -41,7 +48,8 @@
 }
 
 .portHitZone {
-	width: 10vh;
-	height: 10vh;
+	width: 15vw;
+	height: 15vh;
+	background-color: green;
 	position: absolute;
 }
