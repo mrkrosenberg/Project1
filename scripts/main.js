@@ -2,26 +2,33 @@ console.log("connected");
 
 $(document).ready( function (){
 
-//player constructor function
+	//player constructor function
 	function Player(id, leftCoordinate, topCoordinate) {					
 		this.id = id;
 		this.left = leftCoordinate;
 		this.top = topCoordinate;
 	}
 
+	// $('#singlePlayer').click( function () {
+	// var Rick = new Player('Rick', 0, 0);
+	// $('#gameBoard').append('<div class="Rick" style="top:' + Rick.top + '; left:' + Rick.left + ';"></div>');
+	// var rickCoord = $('.Rick').offset();
+	// console.log('rick works');
+	// });
+
 	// uses constructor function to create players Rick and Morty
 	var Rick = new Player('Rick', 0, 0);
-	// console.log(Rick);
+	console.log(Rick);
 	var Morty = new Player('Morty', 0, 0);
 	// console.log(Morty);
 	
 	//creates a div element for Rick and styles it with the top and left coordinates 
-	$('.container').append('<div class="Rick" style="top:' + Rick.top + '; left:' + Rick.left + ';"></div>');
-	var rickCoord = $('.Rick').position();
-	// console.log(rickCoord);
+	$('#gameBoard').append('<div class="Rick" style="top:' + Rick.top + '; left:' + Rick.left + ';"></div>');
+	var rickCoord = $('.Rick').offset();
+	console.log(rickCoord);
 
-	$('.container').append('<div class="Morty" style="top:' + Morty.top + '; left:' + Morty.left + ';"></div>');
-	var mortyCoord = $('.Morty').position();
+	$('#gameBoard').append('<div class="Morty" style="top:' + Morty.top + '; left:' + Morty.left + ';"></div>');
+	var mortyCoord = $('.Morty').offset();
 	// console.log(mortyCoord);
 
 	//player1 movement
@@ -30,16 +37,18 @@ $(document).ready( function (){
 			$('.Rick').animate( {
 				left: '-=10'
 			}, -200);
-			rickCoord = $('.Rick').position();
+			rickCoord = $('.Rick').offset();
 			checkForCollision();
+			portalCollision();
 			// console.log(rickCoord);
 		}
 		if (move.keyCode == 73) {
 			$('.Rick').animate( {
 				top: '-=10'
 			}, -200);
-			rickCoord = $('.Rick').position();
+			rickCoord = $('.Rick').offset();
 			checkForCollision();
+			portalCollision();
 			// console.log(rickCoord);
 		}
 		if (move.keyCode == 76) {
@@ -47,8 +56,9 @@ $(document).ready( function (){
 			$('.Rick').animate( {
 				left: '+=10'
 			}, -200);
-			rickCoord = $('.Rick').position();
+			rickCoord = $('.Rick').offset();
 			checkForCollision();
+			portalCollision();
 			// console.log(rickCoord);
 		}
 		if (move.keyCode == 75) {
@@ -56,8 +66,9 @@ $(document).ready( function (){
 			$('.Rick').animate( {
 				top: '+=10'
 			}, -200);
-			rickCoord = $('.Rick').position();
+			rickCoord = $('.Rick').offset();
 			checkForCollision();
+			portalCollision();
 			// console.log(rickCoord);
 		}
 		console.log(rickCoord);
@@ -69,16 +80,18 @@ $(document).ready( function (){
 			$('.Morty').animate( {
 				left: '-=10'
 			}, -200);
-			mortyCoord = $('.Morty').position();
+			mortyCoord = $('.Morty').offset();
 			checkForCollision();
+			portalCollision();
 			// console.log(mortyCoord);
 		}
 		if (move.keyCode == 87) {
 			$('.Morty').animate( {
 				top: '-=10'
 			}, -200);
-			mortyCoord = $('.Morty').position();
+			mortyCoord = $('.Morty').offset();
 			checkForCollision();
+			portalCollision();
 			// console.log(mortyCoord);
 		}
 		if (move.keyCode == 68) {
@@ -86,8 +99,9 @@ $(document).ready( function (){
 			$('.Morty').animate( {
 				left: '+=10'
 			}, -200);
-			mortyCoord = $('.Morty').position();
+			mortyCoord = $('.Morty').offset();
 			checkForCollision();
+			portalCollision();
 			// console.log(mortyCoord);
 		}
 		if (move.keyCode == 83) {
@@ -95,8 +109,9 @@ $(document).ready( function (){
 			$('.Morty').animate( {
 				top: '+=10'
 			}, -200);
-			mortyCoord = $('.Morty').position();
+			mortyCoord = $('.Morty').offset();
 			checkForCollision();
+			portalCollision();
 			// console.log(mortyCoord);
 		}
 		// console.log(mortyCoord);
@@ -111,15 +126,17 @@ $(document).ready( function (){
 	// console.log(location);
 
 //creates portal element & attaches it to portalStart location & stores its coordinates in a variable
-	var portal = $('<div class="portHitZone"><img id="wormHole" src="../images/portal.jpg" alt="portal"></div>').appendTo($('#portalStart'));	var portCoord = $('.portHitZone').offset();
+	var portal = $('<div class="portHitZone"><img id="wormHole" src="../images/portal.jpg" alt="portal"></div>').appendTo($('#portalStart'));	
+	var portCoord = $('.portHitZone').offset();
 	console.log(portCoord);
 	//sets the portal to move to a new location at designated intervals and updates its coordinates
 	setInterval( function () {portal.appendTo(location[Math.floor((Math.random() * 100) + 1)]);
 		portCoord = $('.portHitZone').offset();
 		// console.log(portCoord);
-	}, 4000);
+	}, 10000);
 
-	
+	var rickPoints = 0;
+	var mortyPoints = 0;
 	
 function checkForCollision () {
 	if (
@@ -130,6 +147,7 @@ function checkForCollision () {
 		) {
 			target.appendTo(location[Math.floor((Math.random() * 100) + 1)]);
 			targCoord = $('.target').offset();
+			rickPoints = rickPoints + 1;
 	}
 	if (
 		(mortyCoord.left > targCoord.left) &&
@@ -139,8 +157,11 @@ function checkForCollision () {
 		) {
 			target.appendTo(location[Math.floor((Math.random() * 100) + 1)]);
 			targCoord = $('.target').offset();	
+			mortyPoints = mortyPoints + 1;
 	}
 }
+
+console.log(rickPoints);
 
 function portalCollision () {
 	if (
@@ -149,10 +170,19 @@ function portalCollision () {
 		(rickCoord.top > portCoord.top) &&
 		(rickCoord.top < (portCoord.top + portal.width()))
 		) {
-			$('.Rick').appendTo(location[Math.floor((Math.random() * 100) + 1)]);
+			$('.Rick').appendTo(location[Math.floor((Math.random() * 40) + 1)]);
+			rickCoord = $('.Rick').offset();
 	}
 
-
+	if (
+		(mortyCoord.left > portCoord.left) &&
+		(mortyCoord.left < (portCoord.left + portal.width())) &&
+		(mortyCoord.top > portCoord.top) &&
+		(mortyCoord.top < (portCoord.top + portal.width()))
+		) {
+			$('.Morty').appendTo(location[Math.floor((Math.random() * 40) + 1)]);
+			mortyCoord = $('.Morty').offset();
+	}
 
 
 }
