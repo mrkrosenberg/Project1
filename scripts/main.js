@@ -111,34 +111,50 @@ $(document).ready( function (){
 	// console.log(location);
 
 //creates portal element & attaches it to portalStart location & stores its coordinates in a variable
-	var portal = $('<div class="portHitZone"><img id="wormHole" src="../images/portal.jpg" alt="portal"></div>').appendTo($('#portalStart'));		 
-	var portCoord = $('.portHitZone').offset();
-	// console.log(portCoord);
+	var portal = $('<div class="portHitZone"><img id="wormHole" src="../images/portal.jpg" alt="portal"></div>').appendTo($('#portalStart'));	var portCoord = $('.portHitZone').offset();
+	console.log(portCoord);
 	//sets the portal to move to a new location at designated intervals and updates its coordinates
-	// setInterval( function () {portal.appendTo(location[Math.floor((Math.random() * 100) + 1)]);
-	// 	portCoord = $('.portHitZone').offset();
-	// 	// console.log(portCoord);
-	// }, 1000);
+	setInterval( function () {portal.appendTo(location[Math.floor((Math.random() * 100) + 1)]);
+		portCoord = $('.portHitZone').offset();
+		// console.log(portCoord);
+	}, 4000);
+
+	
 	
 function checkForCollision () {
 	if (
-		('rickCoord.left' > 'targCoord.left') &&
-		('rickCoord.left' < ('targCoord.left' + 'target.width')) &&
-		('rickCoord.top' > 'targCoord.top') &&
-		('rickCoord.top' < ('targCoord.top + target.height'))
+		(rickCoord.left > targCoord.left) &&
+		(rickCoord.left < (targCoord.left + $('.target').width())) &&
+		(rickCoord.top > targCoord.top) &&
+		(rickCoord.top < (targCoord.top + $('.target').height()))
 		) {
-			alert('hit!');
 			target.appendTo(location[Math.floor((Math.random() * 100) + 1)]);
+			targCoord = $('.target').offset();
 	}
 	if (
 		(mortyCoord.left > targCoord.left) &&
-		(mortyCoord.left < (targCoord.left + target.width)) &&
+		(mortyCoord.left < (targCoord.left + target.width())) &&
 		(mortyCoord.top > targCoord.top) &&
-		(mortyCoord.top < (targCoord.top + target.height))
+		(mortyCoord.top < (targCoord.top + target.height()))
 		) {
-			alert('hit!');
-			target.appendTo(location[Math.floor((Math.random() * 100) + 1)]);	
+			target.appendTo(location[Math.floor((Math.random() * 100) + 1)]);
+			targCoord = $('.target').offset();	
 	}
+}
+
+function portalCollision () {
+	if (
+		(rickCoord.left > portCoord.left) &&
+		(rickCoord.left < (portCoord.left + portal.width())) &&
+		(rickCoord.top > portCoord.top) &&
+		(rickCoord.top < (portCoord.top + portal.width()))
+		) {
+			$('.Rick').appendTo(location[Math.floor((Math.random() * 100) + 1)]);
+	}
+
+
+
+
 }
 
 
