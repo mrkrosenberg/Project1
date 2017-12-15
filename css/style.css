@@ -89,11 +89,21 @@
 	margin: 10% auto;
 	text-align: center;
 	padding: 20px;
-	background-color: white;
+	/*background-color: white;*/
+}
+
+.modeTitle {
+	color: rgba(0, 0, 0, 0.7);
+	text-shadow: 2px 2px 2px #15F32B;
 }
 
 .button {
 	margin: 40px;
+	background: rgba(0, 0, 0, .5);
+	color: #15F32B;
+	box-shadow: 4px 4px 4px #15F32B;
+	border: 1px #15F32B;
+	border-radius: 5px;
 }
 
 
@@ -150,6 +160,8 @@ footer {
 .winningCont {
 	height: 80%;
 	width: 80%;
+	color: black;
+	text-shadow: 1px 2px 2px #15F32B;
 	margin: 5% auto;
 	text-align: center;
 	padding: 20px;
@@ -161,6 +173,13 @@ footer {
 
 .button {
 	margin: 40px;
+}
+
+@media (max-width: 600px) {
+	.container {
+		background-color: black;
+		background-image: none;
+	}
 }
 
 
