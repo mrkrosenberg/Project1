@@ -185,7 +185,7 @@ function portalCollision () {
 		(mortyCoord.top > portCoord.top) &&
 		(mortyCoord.top < (portCoord.top + portal.width()))
 		) {
-			$('.Morty').appendTo(location[Math.floor((Math.random() * 40) + 1)]);		//updates morty score on scoreboard
+			$('.Morty').appendTo(location[Math.floor((Math.random() * 40) + 1)]);		//updates morty score on scoreboard;
 			mortyCoord = $('.Morty').offset();
 	}
 
