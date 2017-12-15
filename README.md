@@ -7,25 +7,26 @@ Project 1: A two player, vs. style game. Can be played by two human players or o
 ## Objectives
 Player 1: 
           Move around the screen to chase a moving target
-          Avoid falling objects to stay alive
-
-Player 2/Computer: 
-          Move horizontally across the top of the screen
-          Drop objects to hit/kill Player 1
+          
+Player 2: 
+          Move around the screen to chase a moving target
           
 Scoring:
-          Each time player1 catches the target, 10 pts are awarded
-          Each time player2 kills player1, player2 wins
+          Each time player catches the target, 1pt is awarded
+
+Portal:
+          Portals will move around the screen and move the player when they collide
+          
           
 ## Functionality
 
+
 ## Stretch Goals
 
-> Create different levels/themes that can be selected from a screen after game mode selection
-          > changes background, meteors, object and player
-> Start with 3 lives for player1
-          > a life will be taken from player1 each time he/she dies
-> Vary objects being dropped 
+> Create player select screen with multiple characters
+> Animate the main page 
+> Keep track of top 3 high scores
+> Add more portals as the 
   
   
   
