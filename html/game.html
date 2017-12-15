@@ -139,6 +139,7 @@
 		</div>
 
 		<div class="row">	
+			<div class="col-sm-1" id="rickStart"></div>
 			<div class="col-sm-1"></div>
 			<div class="col-sm-1"></div>
 			<div class="col-sm-1"></div>
@@ -149,12 +150,10 @@
 			<div class="col-sm-1"></div>
 			<div class="col-sm-1"></div>
 			<div class="col-sm-1"></div>
-			<div class="col-sm-1"></div>
-			<div class="col-sm-1"></div>
+			<div class="col-sm-1" id="mortyStart"></div>
 		</div>
 
 		<div class="row">	
-			<div class="col-sm-1" id="mortyStart"></div>
 			<div class="col-sm-1"></div>
 			<div class="col-sm-1"></div>
 			<div class="col-sm-1"></div>
@@ -165,15 +164,27 @@
 			<div class="col-sm-1"></div>
 			<div class="col-sm-1"></div>
 			<div class="col-sm-1"></div>
-			<div class="col-sm-1" id="rickStart"></div>
+			<div class="col-sm-1"></div>
+			<div class="col-sm-1"></div>
 		</div>
 	</div>
+
+
+		<div class="modal">
+			<div class="modalCont">
+				<span class="closeBtn">&times;</span>
+				<div class="playerSelect">
+					<button id="singlePlayer"></button>
+					<button></button>
+				</div>
+			</div>
+		</div>
 
 	<footer>
 		<div class="row" id="scoreBoard">
 			<div class="col-xs-5">
-				<div class="score" id="player1Score">
-					<h2>Rick:</h2>		
+				<div class="score" id="rickScore">
+					<h2 id="rickTotalScore">Rick:&nbsp;</h2>		
 				</div>
 			</div>			
 			<div class="col-xs-2">
@@ -182,8 +193,8 @@
 				</div>
 			</div>
 			<div class="col-xs-5">
-				<div class="score" id="player2Score">	
-					<h2>Morty:</h2>
+				<div class="score" id="mortyScore">	
+					<h2 id="mortyTotalScore">Morty:&nbsp;</h2>
 				</div>
 			</div>			
 		</div>
