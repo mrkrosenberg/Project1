@@ -1,6 +1,9 @@
 /*CSS for Game Board*/
 .container {
-	background-color: black;
+	background-image: url("../images/gameback.jpg");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
 	height: 85vh;
 	width: 100%;
 	margin-bottom: 0;
@@ -19,33 +22,44 @@
 }
 
 #wormHole {
-	height: 10vh;
+	height: 15vh;
 
 }
 
 .target {
 	height: 15vh;
 	width: 15vw;
-	background-color: yellow;
+	/*background-color: yellow;*/
 	position: absolute;
 }
 
-#gem {
-	height: 10vh;
+#crystals {
+	height: 15vh;
+	float: right;
 }
 
 .Rick {
 	height: 6vh;
 	width: 6vw;
-	background-color: red;
+	/*background-color: red;*/
 	position: absolute;
+	text-align: center;
+}
+
+.rickPlayer {
+	height: 15vh;
 }
 
 .Morty {
 	height: 6vh;
 	width: 6vw;
-	background-color: blue;
+	/*background-color: blue;*/
 	position: absolute;
+	text-align: center;
+}
+
+.mortyPlayer {
+	height: 15vh;
 }
 
 .portHitZone {
@@ -95,7 +109,7 @@ footer {
 .score {
 	height: 15vh;
 	width: 200px;
-	background-color: rgba(233, 40, 36, .25)
+	background-color: rgba(21, 243, 43, .75)
 }
 
 #rickScore {
@@ -130,7 +144,7 @@ footer {
 	height: 100%;
 	width: 100%;
 	overflow: auto;
-	/*background-color: rgba(0, 0, 0, 0.5);*/
+	background-color: rgba(0, 0, 0, 0.75);
 }
 
 .winningCont {
@@ -139,7 +153,10 @@ footer {
 	margin: 5% auto;
 	text-align: center;
 	padding: 20px;
-	background-color: white;
+	box-shadow: 0px 20px 20px 0px #15F32B;
+	background-image: url("../images/ricksanchez.jpg");
+	background-repeat: no-repeat;
+	background-position: center;
 }
 
 .button {

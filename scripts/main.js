@@ -2,10 +2,19 @@ console.log("connected");
 
 $(document).ready( function (){
 
+//Winning Function
 	$(document).keydown( function(win) {
 	if (win.keyCode == 32){
 		$('.winningModal').css('display', 'block');
 	}
+});
+
+$('#menuButton').click( function (){
+
+});
+
+$('#replayButton').click( function(){
+	location.reload();
 });
 
 //player constructor function
@@ -17,18 +26,18 @@ $(document).ready( function (){
 
 $('#singlePlayer').click( function() {
 	var Rick = new Player('Rick', 0, 0);
-	$('#rickStart').append('<div class="Rick" style="top:' + Rick.top + '; left:' + Rick.left + ';"></div>');
+	$('#rickStart').append('<div class="Rick" style="top:' + Rick.top + '; left:' + Rick.left + ';"><img class="rickPlayer" src="../images/rickPlayer.png" alt="" /></div>');
 	var rickCoord = $('.Rick').offset();
 	$('.modal').css('display', 'none');
 });
 
 $('#twoPlayer').click( function() {
 		var Rick = new Player('Rick', 0, 0);
-	$('#rickStart').append('<div class="Rick" style="top:' + Rick.top + '; left:' + Rick.left + ';"></div>');
+	$('#rickStart').append('<div class="Rick" style="top:' + Rick.top + '; left:' + Rick.left + ';"><img class="rickPlayer" src="../images/rickPlayer.png" alt="" /></div>');
 	var rickCoord = $('.Rick').offset();
 	$('.modal').css('display', 'none');
 	var Morty = new Player('Morty', 0, 0);
-	$('#mortyStart').append('<div class="Morty" style="top:' + Morty.top + '; left:' + Morty.left + ';"></div>');
+	$('#mortyStart').append('<div class="Morty" style="top:' + Morty.top + '; left:' + Morty.left + ';"><img class="mortyPlayer" src="../images/mortyPlayer.png" alt="" /></div>');
 	var mortyCoord = $('.Morty').offset();
 	$('.modal').css('display', 'none');
 });
@@ -120,7 +129,7 @@ $('#twoPlayer').click( function() {
 	});
 
 //sets the target area for attaches it to the gameboard
-	var target = $('<div class="target"></div>').appendTo($('#targetStart'));
+	var target = $('<div class="target"><img id="crystals" src="../images/kalaxiancrystal.png" alt="" /></div>').appendTo($('#targetStart'));
 	var targCoord = $('.target').offset();
 	console.log(targCoord);
 
@@ -129,14 +138,14 @@ $('#twoPlayer').click( function() {
 	// console.log(location);
 
 //creates portal element & attaches it to portalStart location & stores its coordinates in a variable
-	var portal = $('<div class="portHitZone"><img id="wormHole" src="../images/portal.jpg" alt="portal"></div>').appendTo($('#portalStart'));	
+	var portal = $('<div class="portHitZone"><img id="wormHole" src="../images/portal.gif" alt="portal"></div>').appendTo($('#portalStart'));	
 	var portCoord = $('.portHitZone').offset();
 	console.log(portCoord);
 //sets the portal to move to a new location at designated intervals and updates its coordinates
 	setInterval( function () {portal.appendTo(location[Math.floor((Math.random() * 100) + 1)]);
 		portCoord = $('.portHitZone').offset();
 		// console.log(portCoord);
-	}, 1000);
+	}, 2000);
 
 	var rickPoints = 0;
 	$('#rickTotalScore').html('Rick: ' + rickPoints);

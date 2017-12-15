@@ -50,7 +50,7 @@
 }
 
 .closeBtn {
-	float: right;
+	/*float: right;*/
 	background-color: rgba(38, 251, 81);
 	font-size: 30px;
 }
