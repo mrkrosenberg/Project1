@@ -2,6 +2,12 @@ console.log("connected");
 
 $(document).ready( function (){
 
+	$(document).keydown( function(win) {
+	if (win.keyCode == 32){
+		$('.winningModal').css('display', 'block');
+	}
+});
+
 //player constructor function
 	function Player(id, leftCoordinate, topCoordinate) {					
 		this.id = id;
@@ -9,27 +15,23 @@ $(document).ready( function (){
 		this.top = topCoordinate;
 	}
 
-	// $('#singlePlayer').click( function () {
-	// var Rick = new Player('Rick', 0, 0);
-	// $('#gameBoard').append('<div class="Rick" style="top:' + Rick.top + '; left:' + Rick.left + ';"></div>');
-	// var rickCoord = $('.Rick').offset();
-	// console.log('rick works');
-	// });
-
-// uses constructor function to create players Rick and Morty
+$('#singlePlayer').click( function() {
 	var Rick = new Player('Rick', 0, 0);
-	console.log(Rick);
-	var Morty = new Player('Morty', 0, 0);
-	// console.log(Morty);
-	
-//creates a div element for Rick and styles it with the top and left coordinates 
 	$('#rickStart').append('<div class="Rick" style="top:' + Rick.top + '; left:' + Rick.left + ';"></div>');
 	var rickCoord = $('.Rick').offset();
-	console.log(rickCoord);
+	$('.modal').css('display', 'none');
+});
 
+$('#twoPlayer').click( function() {
+		var Rick = new Player('Rick', 0, 0);
+	$('#rickStart').append('<div class="Rick" style="top:' + Rick.top + '; left:' + Rick.left + ';"></div>');
+	var rickCoord = $('.Rick').offset();
+	$('.modal').css('display', 'none');
+	var Morty = new Player('Morty', 0, 0);
 	$('#mortyStart').append('<div class="Morty" style="top:' + Morty.top + '; left:' + Morty.left + ';"></div>');
 	var mortyCoord = $('.Morty').offset();
-	// console.log(mortyCoord);
+	$('.modal').css('display', 'none');
+});
 
 //player1 movement
 	$(document).keydown( function(move){
@@ -117,6 +119,7 @@ $(document).ready( function (){
 		// console.log(mortyCoord);
 	});
 
+//sets the target area for attaches it to the gameboard
 	var target = $('<div class="target"></div>').appendTo($('#targetStart'));
 	var targCoord = $('.target').offset();
 	console.log(targCoord);

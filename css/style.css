@@ -119,6 +119,32 @@ footer {
 	text-decoration: underline;
 }
 
+/*CSS for Winning Modal*/
+
+.winningModal {
+	display: none;
+	position: fixed;
+	z-index: 1;
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	overflow: auto;
+	/*background-color: rgba(0, 0, 0, 0.5);*/
+}
+
+.winningCont {
+	height: 80%;
+	width: 80%;
+	margin: 5% auto;
+	text-align: center;
+	padding: 20px;
+	background-color: white;
+}
+
+.button {
+	margin: 40px;
+}
 
 
 
