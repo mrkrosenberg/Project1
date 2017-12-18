@@ -10,18 +10,18 @@ $(document).ready( function (){
 });
 
 $('#menuButton').click( function (){
-
+	window.location = '../index.html';
 });
 
 $('#replayButton').click( function(){
-	location.reload();
+	window.location = '../html/game.html';
 });
 
 //player constructor function
 	function Player(id, leftCoordinate, topCoordinate) {					
 		this.id = id;
-		this.left = leftCoordinate;
-		this.top = topCoordinate;
+		// this.left = leftCoordinate;
+		// this.top = topCoordinate;
 	}
 
 $('#singlePlayer').click( function() {
