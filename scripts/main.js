@@ -24,6 +24,7 @@ $('#replayButton').click( function(){
 		this.top = topCoordinate;
 	}
 
+//function to set up single player mode
 $('#singlePlayer').click( function() {
 	var Rick = new Player('Rick', 0, 0);
 	$('#rickStart').append('<div class="Rick" style="top:' + Rick.top + '; left:' + Rick.left + ';"><img class="rickPlayer" src="../images/rickPlayer.png" alt="" /></div>');
@@ -31,6 +32,7 @@ $('#singlePlayer').click( function() {
 	$('.modal').css('display', 'none');
 });
 
+//function to set up two player mode
 $('#twoPlayer').click( function() {
 		var Rick = new Player('Rick', 0, 0);
 	$('#rickStart').append('<div class="Rick" style="top:' + Rick.top + '; left:' + Rick.left + ';"><img class="rickPlayer" src="../images/rickPlayer.png" alt="" /></div>');
@@ -41,6 +43,14 @@ $('#twoPlayer').click( function() {
 	var mortyCoord = $('.Morty').offset();
 	$('.modal').css('display', 'none');
 });
+
+//initializes player scores at 0
+	var rickPoints = 0;
+	$('#rickTotalScore').html('Rick: ' + rickPoints);
+	var mortyPoints = 0;
+	$('#mortyTotalScore').html('Morty: ' + mortyPoints);
+
+createPortals();
 
 //player1 movement
 	$(document).keydown( function(move){
@@ -128,6 +138,8 @@ $('#twoPlayer').click( function() {
 		// console.log(mortyCoord);
 	});
 
+
+
 //sets the target area for attaches it to the gameboard
 	var target = $('<div class="target"><img id="crystals" src="../images/kalaxiancrystal.png" alt="" /></div>').appendTo($('#targetStart'));
 	var targCoord = $('.target').offset();
@@ -138,27 +150,43 @@ $('#twoPlayer').click( function() {
 	// console.log(location);
 
 //creates portal element & attaches it to portalStart location & stores its coordinates in a variable
-	var portal = $('<div class="portHitZone"><img id="wormHole" src="../images/portal.gif" alt="portal"></div>').appendTo($('#portalStart'));	
-	var portCoord = $('.portHitZone').offset();
+	// function Portal(id){
+	// 	this.id = id;
+	// }
+
+	function createPortals (rickPoints, mortyPoints) {
+		if (rickPoints + mortyPoints === 0) {
+			var portal = $('<div class="portHitZone"><img class="wormHole" src="../images/portal.gif" alt="portal"></div>').appendTo($('#portalStart'));	
+		}
+	}
+
+
+//stores portal coordinates in portCoord
+	var portCoord = portal.offset();
 	console.log(portCoord);
+
 //sets the portal to move to a new location at designated intervals and updates its coordinates
 	setInterval( function () {portal.appendTo(location[Math.floor((Math.random() * 100) + 1)]);
 		portCoord = $('.portHitZone').offset();
 		// console.log(portCoord);
 	}, 2000);
 
-	var rickPoints = 0;
-	$('#rickTotalScore').html('Rick: ' + rickPoints);
-	var mortyPoints = 0;
-	$('#mortyTotalScore').html('Morty: ' + mortyPoints);
+	
+
+
+	// var portal = $('<div class="portHitZone"><img class="wormHole" src="../images/portal.gif" alt="portal"></div>').appendTo($('#portalStart'));	
+	
+
+
+
 
 //function to check for payer collision with the target	
 function checkForCollision () {
 	if (
 		(rickCoord.left > targCoord.left) &&
-		(rickCoord.left < (targCoord.left + $('.target').width())) &&
+		(rickCoord.left < (targCoord.left + target.width())) &&
 		(rickCoord.top > targCoord.top) &&
-		(rickCoord.top < (targCoord.top + $('.target').height()))
+		(rickCoord.top < (targCoord.top + target.height()))
 		) {
 			target.appendTo(location[Math.floor((Math.random() * 100) + 1)]);
 			targCoord = $('.target').offset();
