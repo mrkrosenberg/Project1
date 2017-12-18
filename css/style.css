@@ -29,7 +29,7 @@
 .target {
 	height: 15vh;
 	width: 15vw;
-	/*background-color: yellow;*/
+	background-color: yellow;
 	position: absolute;
 }
 
@@ -41,7 +41,7 @@
 .Rick {
 	height: 6vh;
 	width: 6vw;
-	/*background-color: red;*/
+	background-color: red;
 	position: absolute;
 	text-align: center;
 }
@@ -53,7 +53,7 @@
 .Morty {
 	height: 6vh;
 	width: 6vw;
-	/*background-color: blue;*/
+	background-color: blue;
 	position: absolute;
 	text-align: center;
 }
@@ -65,7 +65,7 @@
 .portHitZone {
 	width: 15vw;
 	height: 15vh;
-	/*background-color: green;*/
+	background-color: green;
 	position: absolute;
 	text-align: right;
 }

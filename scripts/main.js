@@ -30,7 +30,7 @@ $('#replayButton').click( function(){
 $('#singlePlayer').click( function() {
 	var Rick = new Player('Rick', 0, 0);
 	$('#rickStart').append('<div class="Rick" style="top:' + Rick.top + '; left:' + Rick.left + ';"><img class="rickPlayer" src="../images/rickPlayer.png" alt="" /></div>');
-	var rickCoord = $('.Rick').offset();
+	rickCoord = $('.Rick').offset();
 	$('.modal').css('display', 'none');
 });
 
@@ -38,11 +38,11 @@ $('#twoPlayer').click( function() {
 //creates rick for 2 player mode	
 	var Rick = new Player('Rick', 0, 0);
 	$('#rickStart').append('<div class="Rick" style="top:' + Rick.top + '; left:' + Rick.left + ';"><img class="rickPlayer" src="../images/rickPlayer.png" alt="" /></div>');
-	var rickCoord = $('.Rick').offset();
+	rickCoord = $('.Rick').offset();
 //creates morty for 2 player mode
 	var Morty = new Player('Morty', 0, 0);
 	$('#mortyStart').append('<div class="Morty" style="top:' + Morty.top + '; left:' + Morty.left + ';"><img class="mortyPlayer" src="../images/mortyPlayer.png" alt="" /></div>');
-	var mortyCoord = $('.Morty').offset();
+	mortyCoord = $('.Morty').offset();
 	$('.modal').css('display', 'none');
 });
 
