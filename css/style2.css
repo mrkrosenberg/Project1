@@ -6,11 +6,8 @@
 	text-align: center;
 	color: white;
 	background-color: black;
-}
-
-/*#portalTitle {
-	z-index: 0;
-	position: absolute;*/
+	position: absolute;
+	z-index: -1;
 }
 
 .portalOpen {
@@ -19,10 +16,29 @@
 	background-image: url(../images/portalbackground.gif);
 	background-repeat: no-repeat;
 	background-position: center;
-	/*position: absolute;
-	z-index: 1;*/
-	/*animation-name: portalOpen;
-	animation-duration: 4s;*/
+	position: absolute;
+	z-index: -1;
+	animation-name: portalOpen;
+	animation-duration: 4s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes portalOpen {
+	0% {transform: scale(0);}
+	50% {transform: scale(1);}
+	100% {transform: scale(0);}
+	
+}
+
+.portalContent {
+	margin-top: 75px;
+	animation-name: portalContent;
+	animation-duration: 3s;
+}
+
+@keyframes portalContent {
+	0% {transform: scale(0);}
+	100% {transform: scale(1);}
 }
 
 #mainLogo {
@@ -79,14 +95,4 @@
 	cursor: crosshair;
 }
 
-/*@keyframes portalOpen {
-
-		0% {transform: scale(0);}
-		25% {transform: scale(0.5);}
-		50% {transform: scale(1);}
-		75% {transform: scale(.5);}
-		100% {transform: scale(0);}
-
-	
-}*/
 

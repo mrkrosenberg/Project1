@@ -14,7 +14,10 @@ $('#menuButton').click( function (){
 });
 
 $('#replayButton').click( function(){
+
 	window.location = '../html/game.html';
+
+	// window.location = 'game.html';
 });
 
 //player constructor function
@@ -38,12 +41,15 @@ $('#twoPlayer').click( function() {
 	var Rick = new Player('Rick', 0, 0);
 	$('#rickStart').append('<div class="Rick" style="top:' + Rick.top + '; left:' + Rick.left + ';"><img class="rickPlayer" src="../images/rickPlayer.png" alt="" /></div>');
 	rickCoord = $('.Rick').offset();
-	
 	var Morty = new Player('Morty', 0, 0);
 	$('#mortyStart').append('<div class="Morty" style="top:' + Morty.top + '; left:' + Morty.left + ';"><img class="mortyPlayer" src="../images/mortyPlayer.png" alt="" /></div>');
 	mortyCoord = $('.Morty').offset();
 	$('.modal').css('display', 'none');
+	
+	
 });
+
+console.log(rickCoord, mortyCoord);
 
 //player1 movement
 	$(document).keydown( function(move){
@@ -85,7 +91,6 @@ $('#twoPlayer').click( function() {
 			portalCollision();
 			// console.log(rickCoord);
 		}
-		console.log(rickCoord);
 	});
 
 //player2 movement
@@ -154,6 +159,10 @@ $('#twoPlayer').click( function() {
 	$('#rickTotalScore').html('Rick: ' + rickPoints);
 	var mortyPoints = 0;
 	$('#mortyTotalScore').html('Morty: ' + mortyPoints);
+
+if (rickPoints + mortyPoints == 0) {
+	console.log('scored');
+}
 
 //function to check for payer collision with the target	
 function checkForCollision () {
