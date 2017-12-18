@@ -10,11 +10,11 @@ $(document).ready( function (){
 });
 
 $('#menuButton').click( function (){
-
+	window.location = '../index.html';
 });
 
 $('#replayButton').click( function(){
-	location.reload();
+	window.location = 'game.html';
 });
 
 //player constructor function
