@@ -24,6 +24,9 @@ $('#replayButton').click( function(){
 		this.top = topCoordinate;
 	}
 
+	var rickCoord;
+	var mortyCoord;
+
 $('#singlePlayer').click( function() {
 	var Rick = new Player('Rick', 0, 0);
 	$('#rickStart').append('<div class="Rick" style="top:' + Rick.top + '; left:' + Rick.left + ';"><img class="rickPlayer" src="../images/rickPlayer.png" alt="" /></div>');
