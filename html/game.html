@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+
+<!-- Bootstrap link -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<!-- Responsive viewport -->
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<!-- CSS link -->
+	<link rel="stylesheet" href="../css/style.css">
+
+	<title>Rick and Morty's ClickBait Adventure</title>
+
+</head>
+<body>
+<!-- game board set up as grid -->
+	<div class='container' id="gameBoard">
+		<div class="row">
+			<div class="col-sm-1"></div>
+			<div class="col-sm-1"></div>
+			<div class="col-sm-1"></div>
+			<div class="col-sm-1"></div>
+			<div class="col-sm-1"></div>
+			<div class="col-sm-1"></div>
+			<div class="col-sm-1"></div>
+			<div class="col-sm-1"></div>
+			<div class="col-sm-1"></div>
+			<div class="col-sm-1"></div>
+			<div class="col-sm-1"></div>
+			<div class="col-sm-1" id="portalStart"></div>
+		</div>
+
+		<div class="row">	
+			<div class="col-sm-1" id="targetStart"></div>
+			<div class="col-sm-1"></div>
+			<div class="col-sm-1"></div>
+			<div class="col-sm-1"></div>
+			<div class="col-sm-1"></div>
+			<div class="col-sm-1"></div>
+			<div class="col-sm-1"></div>
+			<div class="col-sm-1"></div>
+			<div class="col-sm-1"></div>
+			<div class="col-sm-1"></div>
+			<div class="col-sm-1"></div>
+			<div class="col-sm-1"></div>
+		</div>
+
+
+		<div class="row">
+			<div class="col-sm-1"></div>
+			<div class="col-sm-1"></div>
+			<div class="col-sm-1"></div>
+			<div class="col-sm-1"></div>
+			<div class="col-sm-1"></div>
+			<div class="col-sm-1"></div>
+			<div class="col-sm-1"></div>
+			<div class="col-sm-1"></div>
+			<div class="col-sm-1"></div>
+			<div class="col-sm-1"></div>
+			<div class="col-sm-1"></div>
+			<div class="col-sm-1"></div>	
+		</div>
+
+		<div class="row">
+			<div class="col-sm-1"></div>
+			<div class="col-sm-1"></div>
+			<div class="col-sm-1"></div>
+			<div class="col-sm-1"></div>
+			<div class="col-sm-1"></div>
+			<div class="col-sm-1"></div>
+			<div class="col-sm-1"></div>
+			<div class="col-sm-1"></div>
+			<div class="col-sm-1"></div>
+			<div class="col-sm-1"></div>
+			<div class="col-sm-1"></div>
+			<div class="col-sm-1"></div>	
+		</div>
+
+		<div class="row">
+			<div class="col-sm-1"></div>
+			<div class="col-sm-1"></div>
+			<div class="col-sm-1"></div>
+			<div class="col-sm-1"></div>
+			<div class="col-sm-1"></div>
+			<div class="col-sm-1"></div>
+			<div class="col-sm-1"></div>
+			<div class="col-sm-1"></div>
+			<div class="col-sm-1"></div>
+			<div class="col-sm-1"></div>
+			<div class="col-sm-1"></div>
+			<div class="col-sm-1"></div>	
+		</div>
+
+
+		<div class="row">	
+			<div class="col-sm-1"></div>
+			<div class="col-sm-1"></div>
+			<div class="col-sm-1"></div>
+			<div class="col-sm-1"></div>
+			<div class="col-sm-1"></div>
+			<div class="col-sm-1"></div>
+			<div class="col-sm-1"></div>
+			<div class="col-sm-1"></div>
+			<div class="col-sm-1"></div>
+			<div class="col-sm-1"></div>
+			<div class="col-sm-1"></div>
+			<div class="col-sm-1"></div>
+		</div>
+
+		<div class="row">	
+			<div class="col-sm-1"></div>
+			<div class="col-sm-1"></div>
+			<div class="col-sm-1"></div>
+			<div class="col-sm-1"></div>
+			<div class="col-sm-1"></div>
+			<div class="col-sm-1"></div>
+			<div class="col-sm-1"></div>
+			<div class="col-sm-1"></div>
+			<div class="col-sm-1"></div>
+			<div class="col-sm-1"></div>
+			<div class="col-sm-1"></div>
+			<div class="col-sm-1"></div>
+		</div>
+
+		<div class="row">	
+			<div class="col-sm-1"></div>
+			<div class="col-sm-1"></div>
+			<div class="col-sm-1"></div>
+			<div class="col-sm-1"></div>
+			<div class="col-sm-1"></div>
+			<div class="col-sm-1"></div>
+			<div class="col-sm-1"></div>
+			<div class="col-sm-1"></div>
+			<div class="col-sm-1"></div>
+			<div class="col-sm-1"></div>
+			<div class="col-sm-1"></div>
+			<div class="col-sm-1"></div>
+		</div>
+
+		<div class="row">	
+			<div class="col-sm-1" id="rickStart"></div>
+			<div class="col-sm-1"></div>
+			<div class="col-sm-1"></div>
+			<div class="col-sm-1"></div>
+			<div class="col-sm-1"></div>
+			<div class="col-sm-1"></div>
+			<div class="col-sm-1"></div>
+			<div class="col-sm-1"></div>
+			<div class="col-sm-1"></div>
+			<div class="col-sm-1"></div>
+			<div class="col-sm-1"></div>
+			<div class="col-sm-1" id="mortyStart"></div>
+		</div>
+
+		<div class="row">	
+			<div class="col-sm-1"></div>
+			<div class="col-sm-1"></div>
+			<div class="col-sm-1"></div>
+			<div class="col-sm-1"></div>
+			<div class="col-sm-1"></div>
+			<div class="col-sm-1"></div>
+			<div class="col-sm-1"></div>
+			<div class="col-sm-1"></div>
+			<div class="col-sm-1"></div>
+			<div class="col-sm-1"></div>
+			<div class="col-sm-1"></div>
+			<div class="col-sm-1"></div>
+		</div>
+	</div>
+
+<!-- mode select modal -->
+		<div class="modal">
+			<div class="modalCont">
+				<h2 class="modeTitle">Mode Select</h2>
+				<div class="playerSelect">
+					<button class="button" id="singlePlayer">Solo</button>
+					<button class="button" id="twoPlayer">Vs</button>
+				</div>
+			</div>
+		</div>
+<!-- winning modal  -->
+		<div class="winningModal">
+			<div class="winningCont">
+				<h2 class="modeTitle">Congratu *Buuuuuurp* lations. You're a reeeeeeal *uuurp* Morty. <br>
+									I figured it out waaaaaaaay faster than you did. <br>
+									*Buuuuuuuuuuuuuurp* Your points mean nothing and everything <br>
+									you believe is a lie. <br>
+									Wub a lubba dub dub!	
+				</h2>
+				<div class="playerSelect">
+					<button class="button" id="menuButton">Main Page</button>
+					<button class="button" id="replayButton">Play Again</button>
+				</div>
+			</div>
+		</div>
+<!-- scoreboard  -->
+	<footer>
+		<div class="row" id="scoreBoard">
+			<div class="col-xs-5">
+				<div class="score" id="rickScore">
+					<h2 id="rickTotalScore">Rick:&nbsp;</h2>		
+				</div>
+			</div>			
+			<div class="col-xs-2">
+				
+			</div>
+			<div class="col-xs-5">
+				<div class="score" id="mortyScore">	
+					<h2 id="mortyTotalScore">Morty:&nbsp;</h2>
+				</div>
+			</div>			
+		</div>
+	</footer>
+
+	<!-- jQuery link; JS link; Bootstrap JS link -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+	<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+	<script type="text/javascript" src="../scripts/main.js"></script>
+
+
+</body>
+</html>

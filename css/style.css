@@ -1,5 +1,189 @@
-.gameBoard {
-	background-color: black;
-	height: 100vh;
+/*CSS for Game Board*/
+.container {
+	background-image: url("../images/gameback.jpg");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 85vh;
 	width: 100%;
+	margin-bottom: 0;
 }
+
+.col-sm-1 {
+	/*height: 10vh;*/
+	/*border: 1px solid red;*/
+	
+}
+
+.row {
+	height: 9vh;
+	/*border: 1px solid red;*/
+	
+}
+
+.target {
+	height: 20vh;
+	width: 10vw;
+	/*background-color: yellow;*/
+	position: absolute;
+}
+
+#crystals {
+	height: 15vh;
+	float: right;
+}
+
+.Rick {
+	height: 10vh;
+	width: 6vw;
+	/*background-color: red;*/
+	position: absolute;
+	text-align: center;
+}
+
+.rickPlayer {
+	height: 15vh;
+}
+
+.Morty {
+	height: 10vh;
+	width: 6vw;
+	/*background-color: blue;*/
+	position: absolute;
+	text-align: center;
+}
+
+.mortyPlayer {
+	height: 15vh;
+}
+
+.portHitZone {
+	width: 10vw;
+	height: 20vh;
+	/*background-color: green;*/
+	position: absolute;
+	text-align: right;
+}
+
+#wormHole {
+	height: 15vh;
+}
+
+/*CSS for Game Mode Modal*/
+.modal {
+	display: block;
+	position: fixed;
+	z-index: 1;
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	overflow: auto;
+	background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modalCont {
+	height: 40vh;
+	width: 40vw;
+	margin: 10% auto;
+	text-align: center;
+	padding: 20px;
+	/*background-color: white;*/
+}
+
+.modeTitle {
+	color: rgba(0, 0, 0, 0.7);
+	text-shadow: 2px 2px 2px #15F32B;
+}
+
+.button {
+	margin: 40px;
+	background: rgba(0, 0, 0, .5);
+	color: #15F32B;
+	box-shadow: 4px 4px 4px #15F32B;
+	border: 1px #15F32B;
+	border-radius: 5px;
+}
+
+
+
+/*CSS for Footer and ScoreBoard*/
+footer {
+	height: 20vh;
+	width: 100%;
+	margin-top: 0;
+	background-color: black;
+}
+
+.score {
+	height: 15vh;
+	width: 200px;
+	background-color: rgba(21, 243, 43, .75)
+}
+
+#rickScore {
+	float: left;
+	padding-left: 20px;
+}
+
+#mortyScore {
+	float: right;
+	padding-left: 20px;
+}
+
+.col-xs-2 {
+	text-align: center;
+}
+
+#timeBoard {
+	height: 15vh;
+	width: 100%;
+	background-color: red;
+	text-decoration: underline;
+}
+
+/*CSS for Winning Modal*/
+
+.winningModal {
+	display: none;
+	position: fixed;
+	z-index: 1;
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	overflow: auto;
+	background-color: rgba(0, 0, 0, 0.75);
+}
+
+.winningCont {
+	height: 80%;
+	width: 80%;
+	color: black;
+	text-shadow: 1px 2px 2px #15F32B;
+	margin: 5% auto;
+	text-align: center;
+	padding: 20px;
+	box-shadow: 0px 20px 20px 0px #15F32B;
+	background-image: url("../images/ricksanchez.jpg");
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.button {
+	margin: 40px;
+}
+
+@media (max-width: 600px) {
+	.container {
+		background-color: black;
+		background-image: none;
+	}
+}
+
+
+
+
+
+
+
