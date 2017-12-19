@@ -18,15 +18,13 @@ Portal:
           Portals will move around the screen and move the player when they collide
           
           
-## Functionality
+## Tech
+
+Structure: HTML
+Styling: CSS
+DOM Manipulation: jQuery
 
 
-## Stretch Goals
-
-> Create player select screen with multiple characters
-> Animate the main page 
-> Keep track of top 3 high scores
-> Add more portals as the 
   
   
   
