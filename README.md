@@ -1,8 +1,9 @@
 # Project1
 
-### Main Title: Click It
+### Main Title: Rick and Morty's ClickBait Adventure
 
-Project 1 : A two player, vs. style game. Can be played by two human players or one player and the computer. 
+Project 1 : A two player, vs. style game. Can be played by up to 2 human players.
+I wanted my game to be something that would be fun, but also have a theme. On top of that, I wanted to do something that would stray from what you would expect from a game. After more than a few revisions, I landed on the idea of playing a Rick and Morty themed joke on the lucky person(s) who decided to give this game a try. 
 
 ## Objectives
 Player 1 : 
@@ -16,6 +17,9 @@ Scoring :
 
 Portal :
           Portals will move around the screen and move the player when they collide
+          
+How to Win: 
+          Winning is a matter of being "smarter" than the system. Just click the space bar to win.
           
           
 ## Tech
