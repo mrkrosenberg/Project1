@@ -21,7 +21,9 @@ Portal:
 ## Tech
 
 Structure: HTML
+
 Styling: CSS
+
 DOM Manipulation: jQuery
 
 
@@ -31,3 +33,5 @@ DOM Manipulation: jQuery
   Wireframe : https://wireframepro.mockflow.com/view/D2efd29401f4d8e70a30e285ade085d18
   
   Trello : https://trello.com/b/uUMlkXdU/project-1-browser-game
+  
+  Rick and Morty's ClickBait Adventure : https://mrkrosenberg.github.io/Project1/
