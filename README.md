@@ -2,32 +2,36 @@
 
 ### Main Title: Click It
 
-Project 1: A two player, vs. style game. Can be played by two human players or one player and the computer. 
+Project 1 : A two player, vs. style game. Can be played by two human players or one player and the computer. 
 
 ## Objectives
-Player 1: 
+Player 1 : 
           Move around the screen to chase a moving target
           
-Player 2: 
+Player 2 : 
           Move around the screen to chase a moving target
           
-Scoring:
+Scoring :
           Each time player catches the target, 1pt is awarded
 
-Portal:
+Portal :
           Portals will move around the screen and move the player when they collide
           
           
 ## Tech
 
-Structure: HTML
+Structure : HTML
 
-Styling: CSS
+Styling : CSS
 
-DOM Manipulation: jQuery
+DOM Manipulation : jQuery
+
+## Challenges
+
+Time : It took me a long time to get the functionality 
 
 
-  
+## Links
   
   
   Wireframe : https://wireframepro.mockflow.com/view/D2efd29401f4d8e70a30e285ade085d18
