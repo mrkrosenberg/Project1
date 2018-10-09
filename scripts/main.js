@@ -81,10 +81,6 @@ $(document).ready( function (){
 		gameTimer(60);
 	});
 
-
-
-	// console.log(rickCoord, mortyCoord);
-
 	//player1 movement
 		$(document).keydown( function(move){
 			if (move.keyCode === 65) {
@@ -243,13 +239,3 @@ $(document).ready( function (){
 	}
 	
 });
-
-
-
-
-
-
-
-
-
-

@@ -77,9 +77,9 @@ a {
 }
 
 .modalCont {
-	height: 50%;
+	height: 60%;
 	width: 50%;
-	background-color: rgba(0, 0, 0, 0.85);
+	background-color: rgba(0, 0, 0, 0.5);
 	border: 4px outset rgb(38, 251, 81);
 	margin: 10% auto;
 	padding: 4vh;
@@ -101,7 +101,7 @@ h4 {
 
 .story {
 	padding-top: 5vh;
-	font-size: 2rem;
+	font-size: 2vh;
 }
 
 .closeBtn {
