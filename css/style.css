@@ -121,20 +121,9 @@ footer {
 }
 
 .score {
-	height: 15vh;
-	width: 30vw;
+
 	background-color: rgba(21, 243, 43, .75);
 	border: 4px outset rgb(21, 243, 43);
-}
-
-#rickScore {
-	float: left;
-	padding-left: 20px;
-}
-
-#mortyScore {
-	float: right;
-	padding-left: 20px;
 }
 
 
