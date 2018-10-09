@@ -114,16 +114,23 @@ footer {
 
 .score {
 	height: 15vh;
+	padding-top: 3vh;
 	background-color: rgba(21, 243, 43, .75);
 	border: 4px outset rgb(21, 243, 43);
+	font-family: 'Fredoka One', cursive;
+	color: black;
 }
 
 h3 {
 	display: inline;
+	margin-left: 5vw;
+	font-size: 3rem;
 }
 
 h1 {
 	display: inline;
+	margin-left: 5vw;
+	font-size: 5rem;
 }
 
 #timeClock {
