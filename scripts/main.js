@@ -65,8 +65,9 @@ $(document).ready( function (){
 		$('#rickStart').append('<div class="Rick" style="top:' + Rick.top + '; left:' + Rick.left + ';"><img class="rickPlayer" src="../images/rickPlayer.png" alt="" /></div>');
 		rickCoord = $('.Rick').offset();
 		$('.modal').css('display', 'none');
-		gameTimer(40);
-		$('#mortyScore').css('display', 'none');
+		gameTimer(60);
+		$('#mortyTotalScore').css('display', 'none');
+		$('#mortyScoreTitle').css('display', 'none');
 	});
 
 	$('#twoPlayer').click( function() {
@@ -77,7 +78,7 @@ $(document).ready( function (){
 		$('#mortyStart').append('<div class="Morty" style="top:' + Morty.top + '; left:' + Morty.left + ';"><img class="mortyPlayer" src="../images/mortyPlayer.png" alt="" /></div>');
 		mortyCoord = $('.Morty').offset();
 		$('.modal').css('display', 'none');
-		gameTimer(1);
+		gameTimer(60);
 	});
 
 
@@ -88,7 +89,7 @@ $(document).ready( function (){
 		$(document).keydown( function(move){
 			if (move.keyCode === 65) {
 				$('.Rick').animate( {
-					left: '-=20'
+					left: '-=25'
 				}, -200);
 				rickCoord = $('.Rick').offset();
 				rickKrystalCollision();
@@ -97,7 +98,7 @@ $(document).ready( function (){
 			}
 			if (move.keyCode === 87) {
 				$('.Rick').animate( {
-					top: '-=20'
+					top: '-=25'
 				}, -200);
 				rickCoord = $('.Rick').offset();
 				rickKrystalCollision();
@@ -106,7 +107,7 @@ $(document).ready( function (){
 			}
 			if (move.keyCode === 68) {
 				$('.Rick').animate( {
-					left: '+=20'
+					left: '+=25'
 				}, -200);
 				rickCoord = $('.Rick').offset();
 				rickKrystalCollision();
@@ -115,7 +116,7 @@ $(document).ready( function (){
 			}
 			if (move.keyCode === 83) {
 				$('.Rick').animate( {
-					top: '+=20'
+					top: '+=25'
 				}, -200);
 				rickCoord = $('.Rick').offset();
 				rickKrystalCollision();
@@ -128,7 +129,7 @@ $(document).ready( function (){
 		$(document).keydown( function(move){
 			if (move.keyCode === 74) {
 				$('.Morty').animate( {
-					left: '-=20'
+					left: '-=25'
 				}, -200);
 				mortyCoord = $('.Morty').offset();
 				mortyKrystalCollision();
@@ -137,7 +138,7 @@ $(document).ready( function (){
 			}
 			if (move.keyCode === 73) {
 				$('.Morty').animate( {
-					top: '-=20'
+					top: '-=25'
 				}, -200);
 				mortyCoord = $('.Morty').offset();
 				mortyKrystalCollision();
@@ -146,7 +147,7 @@ $(document).ready( function (){
 			}
 			if (move.keyCode === 76) {
 				$('.Morty').animate( {
-					left: '+=20'
+					left: '+=25'
 				}, -200);
 				mortyCoord = $('.Morty').offset();
 				mortyKrystalCollision();
@@ -155,7 +156,7 @@ $(document).ready( function (){
 			}
 			if (move.keyCode === 75) {
 				$('.Morty').animate( {
-					top: '+=20'
+					top: '+=25'
 				}, -200);
 				mortyCoord = $('.Morty').offset();
 				mortyKrystalCollision();

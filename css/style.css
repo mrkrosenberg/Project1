@@ -113,7 +113,7 @@ footer {
 }
 
 .score {
-	height: 15vh;
+	height: 20vh;
 	padding-top: 3vh;
 	background-color: rgba(21, 243, 43, .75);
 	border: 4px outset rgb(21, 243, 43);
@@ -134,7 +134,7 @@ h1 {
 }
 
 #timeClock {
-	height: 15vh;
+	height: 20vh;
 	text-align: center;
 	border: 4px outset rgb(21, 243, 43);
 	color: rgb(21, 243, 43);
@@ -149,7 +149,7 @@ h6 {
 
 .time {
 	font-family: 'Monoton', cursive;
-	font-size: 8rem;
+	font-size: 7rem;
 	/* color: rgb(21, 243, 43) */
 }
 
