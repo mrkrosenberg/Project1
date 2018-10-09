@@ -4,18 +4,22 @@
 	<meta charset="UTF-8">
 
 <!-- Bootstrap link -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <!-- Responsive viewport -->
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css?family=Fredoka+One|Monoton|Permanent+Marker" rel="stylesheet">
 <!-- CSS link -->
-	<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/style.css">
 
-	<title>Rick and Morty's ClickBait Adventure</title>
+
+<title>Rick and Morty's ClickBait Adventure</title>
 
 </head>
 <body>
 <!-- game board set up as grid -->
 	<div class='container' id="gameBoard">
+	<div class="gameEnding">
 		<div class="row">
 			<div class="col-sm-1"></div>
 			<div class="col-sm-1"></div>
@@ -168,6 +172,7 @@
 			<div class="col-sm-1"></div>
 		</div>
 	</div>
+	</div>
 
 <!-- mode select modal -->
 		<div class="modal">
@@ -197,17 +202,26 @@
 <!-- scoreboard  -->
 	<footer>
 		<div class="row" id="scoreBoard">
-			<div class="col-xs-5">
+			<div class="col-xs-4">
 				<div class="score" id="rickScore">
-					<h2 id="rickTotalScore">Rick:&nbsp;</h2>		
+					<h3 >Rick:</h3>
+					<h1 id="rickTotalScore"></h1>
 				</div>
 			</div>			
-			<div class="col-xs-2">
-				
+			<div class="col-xs-4" id="timeClock">
+				<div class="heading">
+					<h6>
+						Time Remaining:
+					</h6>
+				</div>
+				<div class="time">
+
+				</div>
 			</div>
-			<div class="col-xs-5">
+			<div class="col-xs-4">
 				<div class="score" id="mortyScore">	
-					<h2 id="mortyTotalScore">Morty:&nbsp;</h2>
+					<h3 >Morty:</h3>
+					<h1 id="mortyTotalScore"></h1>
 				</div>
 			</div>			
 		</div>

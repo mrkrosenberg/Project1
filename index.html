@@ -6,6 +6,8 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<!-- Responsive viewport -->
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<!-- Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Fredoka+One|Monoton|Permanent+Marker" rel="stylesheet">
 	<!-- CSS link -->
 	<link rel="stylesheet" href="./css/style2.css">
 
@@ -19,19 +21,20 @@
 			</div>
 			<div class="portalContent">
 				<div class="row" id="mainLogo">	
+					<img src="./images/background.png" alt="">
 				</div>
-				<div class="row gameTitle">
-					<div class="col-xs-12">
+				<div class="row mainOptions">
+					<div class="col-sm-12">
 						<h1>ClickBait Adventure</h1>
 					</div>
 				</div>
 				<div class="row mainOptions">
-					<div class="col-xs-12 playerMode">
-						<h2 id="startGame"><a href="html/game.html">Start Game Beeeyotch!</a></h2>
+					<div class="col-sm-12 playerMode">
+						<h2 id="startGame"><a href="html/game.html">Start Game</a></h2>
 					</div>
 				</div>
 				<div class="row mainOptions">
-					<div class="col-xs-12">
+					<div class="col-sm-12">
 						<h2 class="instrBtn">Instructions</h2>
 					</div>
 				</div>
@@ -40,17 +43,38 @@
 	</div>
 <!-- instructions modal -->
 		<div class="modal">
-			<div class="modalCont">				
+			<div class="modalCont">	
+				<span class="closeBtn">&times;</span>			
 				<h2 class="instrHeading">Instructions</h2>
-				<p class="instructions">
-					Player 1: 	move up - 'i' &nbsp;  | &nbsp;  Player 2: move up - 'w' <br>
-								move right - 'l' &nbsp; 	| &nbsp;&nbsp; move right - 'd'<br>
-								move down - 'k' &nbsp;	| &nbsp;&nbsp; move down - 's' <br>
-								move left - 'j' &nbsp; 	| &nbsp;&nbsp; move left - 'a' <br>
-					Players: press directional controls repeatedly to move character. <br>
-							 hit the kalaxian crystals to score points!
-				</p>
-				<span class="closeBtn">&times;</span>
+				<div class="row">
+					<div class="col-sm-6">
+						<h4>Player 1</h4>
+						<ul class="controls">
+							<li>move up: 'w'</li>
+							<li>move right: 'd'</li>
+							<li>move down: 's'</li>
+							<li>move left: 'a'</li>
+						</ul>
+					</div>
+					<div class="col-sm-6">
+						<h4>Player 2</h4>
+						<ul class="controls">
+							<li>move up: 'i'</li>
+							<li>move right: 'l'</li>
+							<li>move down: 'k'</li>
+							<li>move left: 'j'</li>
+						</ul>
+					</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-12 story">
+					<p>
+						Rick and Morty are at it again. This time they both want the Kalaxian Krystals. Press down on the player controls
+						repeatedly to chase after the Krystals.
+						Watch out for the portal though! It has gone outta of control and will transport you to another location (if you're
+						lucky, it won't be to another dimension!).
+					</p>
+				</div>
 			</div>
 		</div>
 

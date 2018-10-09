@@ -9,22 +9,24 @@
 	margin-bottom: 0;
 }
 
-.col-sm-1 {
-	/*height: 10vh;*/
-	/*border: 1px solid red;*/
+/*.gameEnding {
+	height: 100vh;
+	width: 100vw;
+	display: none;
+	position: absolute;
+	z-index: -1;
+	background-color: rgba(102, 255, 51, 0.5);
+	background-size: cover;
 	
-}
+}*/
 
 .row {
-	height: 9vh;
-	/*border: 1px solid red;*/
-	
+	height: 9vh;	
 }
 
 .target {
 	height: 20vh;
 	width: 10vw;
-	/*background-color: yellow;*/
 	position: absolute;
 }
 
@@ -36,7 +38,6 @@
 .Rick {
 	height: 10vh;
 	width: 6vw;
-	/*background-color: red;*/
 	position: absolute;
 	text-align: center;
 }
@@ -48,7 +49,6 @@
 .Morty {
 	height: 10vh;
 	width: 6vw;
-	/*background-color: blue;*/
 	position: absolute;
 	text-align: center;
 }
@@ -60,12 +60,11 @@
 .portHitZone {
 	width: 10vw;
 	height: 20vh;
-	/*background-color: green;*/
 	position: absolute;
 	text-align: right;
 }
 
-#wormHole {
+.wormHole {
 	height: 15vh;
 }
 
@@ -97,14 +96,20 @@
 }
 
 .button {
+	height: 5vh;
+	width: 10vw;
 	margin: 40px;
 	background: rgba(0, 0, 0, .5);
 	color: #15F32B;
 	box-shadow: 4px 4px 4px #15F32B;
 	border: 1px #15F32B;
 	border-radius: 5px;
+	font-size: 1.75rem;
 }
 
+.button:active {
+	transform: scale(.80);
+}
 
 
 /*CSS for Footer and ScoreBoard*/
@@ -117,8 +122,9 @@ footer {
 
 .score {
 	height: 15vh;
-	width: 200px;
-	background-color: rgba(21, 243, 43, .75)
+	width: 30vw;
+	background-color: rgba(21, 243, 43, .75);
+	border: 4px outset rgb(21, 243, 43);
 }
 
 #rickScore {
@@ -131,15 +137,25 @@ footer {
 	padding-left: 20px;
 }
 
-.col-xs-2 {
+
+#timeClock {
+	height: 15vh;
 	text-align: center;
+	border: 4px outset rgb(21, 243, 43);
+	color: rgb(21, 243, 43);
 }
 
-#timeBoard {
-	height: 15vh;
-	width: 100%;
-	background-color: red;
+h6 {
+	font-family: 'Fredoka One', cursive;
+	font-size: 2rem;
+	letter-spacing: .3vw;
 	text-decoration: underline;
+}
+
+.time {
+	font-family: 'Monoton', cursive;
+	font-size: 8rem;
+	/* color: rgb(21, 243, 43) */
 }
 
 /*CSS for Winning Modal*/
@@ -163,16 +179,18 @@ footer {
 	text-shadow: 1px 2px 2px #15F32B;
 	margin: 5% auto;
 	text-align: center;
-	padding: 20px;
-	box-shadow: 0px 20px 20px 0px #15F32B;
+	/* padding: 20px; */
+	box-shadow: 0px 0px 20px 20px #15F32B;
 	background-image: url("../images/ricksanchez.jpg");
 	background-repeat: no-repeat;
 	background-position: center;
+	background-size: cover;
 }
 
-.button {
-	margin: 40px;
-}
+h2 {
+	padding-top: 20vh;
+} 
+
 
 @media (max-width: 600px) {
 	.container {
